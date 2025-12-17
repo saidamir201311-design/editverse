@@ -1,0 +1,88 @@
+body {
+  margin:0;
+  height:100vh;
+  background:#08000f;
+  color:white;
+  font-family:Segoe UI;
+  overflow:auto;
+}
+
+.bg {
+  position:fixed;
+  inset:0;
+  background:linear-gradient(120deg,#6a00ff,#ff005d,#6a00ff);
+  filter:blur(120px);
+  animation:move 10s infinite linear;
+  z-index:-1;
+}
+
+@keyframes move {
+  0% {transform:scale(1) rotate(0deg);}
+  50% {transform:scale(1.2) rotate(180deg);}
+  100% {transform:scale(1) rotate(360deg);}
+}
+
+.window {
+  background:rgba(0,0,0,0.6);
+  border-radius:20px;
+  padding:30px;
+  width:300px;
+  margin:100px auto;
+  text-align:center;
+  animation:pop 0.6s ease;
+}
+
+.big { width:400px; }
+
+@keyframes pop {
+  from {transform:scale(0.8); opacity:0;}
+  to {transform:scale(1); opacity:1;}
+}
+
+.btn {
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background:#9b00ff;
+  border-radius:10px;
+  color:white;
+  text-decoration:none;
+  border:none;
+}
+.guide-card {
+  background: rgba(20,0,40,0.8);
+  padding:20px;
+  border-radius:15px;
+  margin:20px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.guide-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px #ff00aa;
+}
+
+.guide-card h2 {
+  color: #ff7bff;
+  margin-bottom:10px;
+}
+
+.guide-card ul {
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+a.btn {
+  display:inline-block;
+  margin-top:20px;
+  background:#9b00ff;
+  padding:10px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+  transition: 0.2s;
+}
+
+a.btn:hover {
+  background:#ff00aa;
+}
